@@ -39,7 +39,7 @@ resource "aws_security_group" "inst-security-grp-rule" {
         cidr_blocks     = ["0.0.0.0/0"]
         security_groups = [aws_security_group.inst-load_balancer_sg.id]
     }
-    
+
     ingress {
         description     = "HTTPS"
         from_port       = 443
